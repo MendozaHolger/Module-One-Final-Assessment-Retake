@@ -14,8 +14,16 @@
 * returns: {}
 */
 
-function countWords() {
-  
+function countWords(arr) {
+    let obj = {};
+    for (let element of arr){
+        if (obj.hasOwnProperty(element)){
+            obj[element] = obj[element] + 1
+        } else {
+            obj[element] = 1;
+        }
+    }
+    return obj;
 }
 
 module.exports = countWords
